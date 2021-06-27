@@ -180,6 +180,9 @@ header{
     padding: 6px 10px;
     font-size: 2.6em;
     font-family: cursive;
+    background: #e0e0e0;
+    box-shadow:  21px 21px 42px #a8a8a8,
+             -21px -21px 42px #ffffff;
 }
 #wish a{
     text-decoration: none;
@@ -195,9 +198,11 @@ header{
 #wishmobile{
     text-align: center;
     font-size: 22px;
-    border-top: 2px solid cornflowerblue;
-    border-bottom: 2px solid cornflowerblue;
-    padding: 2px 0;
+    padding: 4px 0;
+    background: #e0e0e0;
+    border-radius: 10px;
+    box-shadow:  4px 4px 4px #a8a8a8,
+             -4px -4px 4px #ffffff;
 }
 @media all and (min-width:310px) {
     #birdhdaycake{
