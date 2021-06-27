@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header{
+    height: 2.6rem;
+}
+#navbar{
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+#headIcon{
+    width: 35px;
+    cursor: pointer;
+    margin-left: 3rem;
+    margin-right: 4px;
+}
+#headIcon:hover, .heading:hover, #wish.hover{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.08);
+    color: lightseagreen;
+}
+.heading, #items, #wish, #wishmobile{
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+.heading{
+    margin-left: 8px;
+}
+#items{
+    display: flex;
+    width: 18rem;
+    justify-content: space-around;
+    list-style: none;
+}
+#items li a{
+    text-decoration: none;
+    color: #46465a;;
+    padding: 4px 8px;
+    border: 0;
+    border-radius: 10px;
+}
+
+#items li a:hover{
+    transition: all 0.3s ease-in-out;
+    background: cornflowerblue;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    height: calc(100vh - 2.6rem);
+    width: 100vw;
+    position: relative;
+}
+
+#birthdaycake{
+    width: 50vw;
+    height: calc(100vh - 2.6rem);
+}
+
+#onlineparty{
+    width: 41vw;
+    height: 59vh;
+}
+
+#ballon, #ballon-ropes, #left-ballon{
+    animation: ballons 1s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+@keyframes ballons {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(2px) translateY(-4px) scale(1.02) rotateX(10deg) rotateY(5deg);
+    }
+}
+
+#fire, #eye{
+    animation: fire 1.2s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+@keyframes fire {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(-1px) translateY(-4px) scale(1.02) rotateY(10deg) ;
+    }
+}
+#background, #right-ballon{
+    animation: background 1.5s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+@keyframes background {
+    from{
+        transform: scale(0.95);
+    }
+    to{
+        transform: translateX(-1px) translateY(4px) scale(1) rotateX(5deg) rotateY(-10deg);
+    }
+}
+
+#left-hands, #leaf{
+    animation: lhands 1.5s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes lhands {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(-1px) translateY(1px) scale(1.02) rotateX(4deg) rotateY(-10deg) ;
+    }
+}
+
+#right-hands{
+    animation: rhands 0.9s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes rhands {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(-1px) translateY(-3px) scale(1.02) rotateX(4deg) rotateY(-10deg) ;
+    }
+}
+#right-hand{
+    animation: rhand 0.9s ease-in-out infinite alternate;
+    transform-origin: 2;
+}
+@keyframes rhand {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(-1px) translateY(3px) scale(1.02) rotateZ(-10deg) rotateY(-10deg) ;
+    }
+}
+
+#candle{
+    animation: candle 0.9s ease-in-out infinite alternate
+}
+@keyframes candle {
+    from{
+        transform: 0;
+    }
+    to{
+        transform: translateX(1px) translateY(-2px) ;
+    }
+}
+#frame{
+    animation: frames 0.9s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+@keyframes frames {
+    from{
+        transform: scale(0.99);
+    }
+    to{
+        transform: scale(1.002) ;
+    }
+}
+
+#wish{
+    position: absolute;
+    bottom: 8vh;
+    right: 8vw;
+    text-align: center;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 2.6em;
+    font-family: cursive;
+}
+#wish a{
+    text-decoration: none;
+    color: black;
+}
+#wish:hover a{
+    transition: all 0.4s ease-in-out;
+    color: white;
+}
+#wish:hover{
+    background: cornflowerblue;
+}
+#wishmobile{
+    text-align: center;
+    font-size: 22px;
+    border-top: 2px solid cornflowerblue;
+    border-bottom: 2px solid cornflowerblue;
+    padding: 2px 0;
+}
+@media all and (min-width:310px) {
+    #birdhdaycake{
+        margin-top: 8rem;
+    }
+}
+@media all and (max-width:425px) {
+    .container{
+        flex-direction: column;
+    }
+    #birthdaycake{
+        margin-top: 0rem;
+        width: 100vw;
+        height: 75vw;
+    }
+    #onlineparty{
+        width: 100vw;
+        height: 60vw;
+    }
+    #wish, .heading{
+        display: none;
+    }
+}
+@media all and (min-width:426px) {
+    #wishmobile{
+        display: none;
+    }
+}
